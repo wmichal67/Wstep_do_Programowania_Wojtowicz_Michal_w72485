@@ -55,7 +55,7 @@
 #print(tekst[6], tekst[9], tekst[12], tekst[1])
 
 ##Zadanie 6
-tresc ="Python jest super"
+#tresc ="Python jest super"
 ##a)
 #print(tresc[0])
 ##b)
