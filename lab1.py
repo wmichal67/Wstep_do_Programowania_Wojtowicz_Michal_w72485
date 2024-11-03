@@ -124,3 +124,121 @@ Używają one ziarna (seed), które determinują ich losowość.
 Dzięki temu, jeśli użyjemy tego samego ziarna, otrzymamy te same wyniki.
 Prawdziwe losowe wartości byłyby niemożliwe do przewidzenia i nie można ich odtworzyć.
 """
+
+#Zadanie 8
+wiek = int(input("Podaj swój wiek: "))
+if wiek >= 18:
+    print("Użytkownik jest pełnoletni")
+else:
+    print("Użytkownik nie jest pełnoletni")
+
+#Zadanie 9
+wiek = int(input("Podaj swój wiek: "))
+if (wiek <= 4) and (wiek > 0):
+    print("bilet za darmo")
+elif (wiek > 4) and (wiek < 18):
+    print("bilet za 10 zł")
+elif (wiek >= 18) and (wiek < 150):
+    student = input("Czy jesteś studentem? (tak/nie): ")
+    if student == "tak":
+        print("bilet za 15zł")
+    else:
+        print("bilet za 20 zł")
+else:
+    print("podaj właściwy wiek")
+
+#Zadanie 10
+x = int(input("Podaj x: "))
+y = int(input("Podaj y: "))
+z = int(input("Podaj z: "))
+if x > y:
+     x, y = y, x
+if x > z:
+     x, z = z, x
+if y > z:
+     y, z = z, y
+print(x, y, z)
+
+#Zadanie 11
+import math
+
+a = float(input("a: "))
+b = float(input("b: "))
+c = float(input("c: "))
+
+if a == 0:
+    print("To nie jest równanie kwadratowe")
+else:
+    delta = b**2 - 4*a*c
+    if delta > 0:
+        x1 = (-b - delta**0.5) / (2*a)
+        x2 = (-b + delta**0.5) / (2*a)
+        print("Dwa rozwiązania: x1 =", x1, "x2 =", x2)
+    elif delta == 0:
+        x = -b / (2*a)
+        print("Jedno rozwiązanie: x =", x)
+    else:
+        print("Brak rozwiązania")
+
+#Zadanie 12
+def funkcja_a(x):
+    if x > 0:
+        return 2 * x
+    elif x == 0:
+        return 0
+    else:  # x < 0
+        return -3 * x
+
+def funkcja_b(x):
+    if x >= 1:
+        return x ** 2
+    else:  # x < 1
+        return x
+
+def funkcja_c(x):
+    if x > 2:
+        return 2 + x
+    elif x == 2:
+        return 8
+    else:  # x < 2
+        return x - 4
+
+x = float(input("Podaj wartość x: "))
+print(f"a(x) = {funkcja_a(x)}")
+print(f"b(x) = {funkcja_b(x)}")
+print(f"c(x) = {funkcja_c(x)}")
+
+#Zadanie 13
+def kalkulator():
+        a = float(input("Podaj pierwszą liczbę: "))
+        operacja = input("Podaj operację (+, -, *, /): ")
+        b = float(input("Podaj drugą liczbę: "))
+
+        if operacja == "+":
+            wynik = a + b
+        elif operacja == "-":
+            wynik = a - b
+        elif operacja == "*":
+            wynik = a * b
+        elif operacja == "/":
+            if b == 0:
+                print("Nie dzielimy przez 0!")
+                return
+            wynik = a / b
+        else:
+            print("Nieznana operacja!")
+            return
+        print("Wynik:", wynik)
+kalkulator()
+
+def sprawdz_excel():
+    nazwa_pliku = input("Podaj nazwę pliku: ")
+    rozszerzenia_excel = ('.xlsx', '.xls', '.xlsm')
+
+    if nazwa_pliku.endswith(rozszerzenia_excel):
+     print("To jest plik Excela")
+    else:
+     print("To nie jest plik Excela")
+
+print("Sprawdzanie rozszerzenia pliku Excel")
+sprawdz_excel()
