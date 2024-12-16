@@ -1,9 +1,10 @@
-#Importuje cała zawartośc pliku geometria
-import geometria
+# obliczenia.py
+import geometria  # Import modułu geometria
 
-#Importuje część pliku geometria
-from geometria import obwod_kola
+# Wywołanie funkcji z modułu geometria
+promien = 16
+obwod = geometria.obwod_kola(promien)
+pole = geometria.pole_kola(promien)
 
-
-print(geometria.obwod_kola(16))
-print(geometria.pole_kola(16))
+print(f"Obwód koła o promieniu {promien}: {obwod}")
+print(f"Pole koła o promieniu {promien}: {pole}")

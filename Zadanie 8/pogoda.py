@@ -1,19 +1,15 @@
 # pogoda.py
+import temperatura  # Import modułu temperatura
 
-# Importowanie modułu temperatura
-import temperatura
-
-# a) 21 stopni Celsjusza na Fahrenheita
+# Wywołanie funkcji z modułu temperatura
 celsius = 21
-fahrenheit = temperatura.c_to_f(celsius)
-print(f"{celsius} stopni Celsjusza to {fahrenheit} stopni Fahrenheita.")
-
-# b) 89 stopni Fahrenheita na Celsjusza
 fahrenheit = 89
-celsius = temperatura.f_to_c(fahrenheit)
-print(f"{fahrenheit} stopni Fahrenheita to {celsius} stopni Celsjusza.")
+kelvin = 35
 
-# c) 35 stopni Celsjusza na Kelwiny
-celsius = 35
-kelvins = temperatura.c_to_k(celsius)
-print(f"{celsius} stopni Celsjusza to {kelvins} Kelwiny.")
+temp_f = temperatura.c_to_f(celsius)
+temp_c = temperatura.f_to_c(fahrenheit)
+temp_k = temperatura.c_to_k(kelvin)
+
+print(f"{celsius}°C to {temp_f:.2f}°F")
+print(f"{fahrenheit}°F to {temp_c:.2f}°C")
+print(f"{kelvin}°C to {temp_k:.2f}K")
